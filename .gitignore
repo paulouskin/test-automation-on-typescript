@@ -1,4 +1,7 @@
 .vscode/
 node_modules/
 dist/
+reports/
 package-lock.json
+# stryker temp files
+.stryker-tmp
