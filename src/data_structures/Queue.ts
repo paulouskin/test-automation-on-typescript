@@ -2,8 +2,8 @@ export class Queue<T> {
 
     private _store: T[] = [];
 
-    constructor(items: Array<T>  = []) {
-        this._store.push(...items);
+    constructor(items?: Array<T> ) {
+        this._store.push(...items || []);
     }
 
     push(val: T) {

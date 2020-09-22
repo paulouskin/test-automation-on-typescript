@@ -1,7 +1,7 @@
-import { Queue } from "../src/Queue"
-import { expect } from "chai";
+import { Queue } from '../src/data_structures/Queue';
+import { expect } from 'chai';
 
-describe('Queue', () => {
+describe('Queue unit tests', () => {
     
     before('Test set up', () => {
         console.log('Here can be your test setup activities');
@@ -13,7 +13,7 @@ describe('Queue', () => {
     }) 
     
     it('should be empty after initialization with empty array', () => {
-        const queue = new Queue<number> ([]);
+        const queue = new Queue<number> ();
         expect(queue.isEmpty()).to.equal(true);
     }) 
 
