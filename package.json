@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register test/**/*.spec.ts",
+    "unit_test": "mocha --require ts-node/register test/**/*.spec.ts",
+    "api_test": "mocha --require ts-node/register test/api/*.spec.ts",
     "stryker": "stryker run"
   },
   "keywords": [],
@@ -17,6 +18,8 @@
     "@stryker-mutator/typescript": "^3.3.1",
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
+    "@types/supertest": "^2.0.4",
+    "supertest": "^5.0.0",
     "chai": "^4.2.0",
     "mocha": "^8.1.2",
     "ts-node": "^9.0.0",
