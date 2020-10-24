@@ -11,7 +11,8 @@ export class Environment {
     }
 
     static getDefaultEnvironment(): Environment {
-        return new Environment(Environments.DEV);
+        const host: string = process.env.npm_config_host || Environments.DEV;
+        return new Environment(host);
     }
 
     get host() {
