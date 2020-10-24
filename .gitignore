@@ -2,6 +2,7 @@
 node_modules/
 dist/
 reports/
+mochawesome-report/
 package-lock.json
 # stryker temp files
 .stryker-tmp
