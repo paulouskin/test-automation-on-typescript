@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import supertest from "supertest"
 import { UserAPI } from "../../src/api/apis/UserAPI";
+import { Environment } from "../../src/api/envs/Environment";
 import { SupertestClient } from "../../src/api/httpclient/SupertestClient";
 
 describe('User API ', () => {
@@ -27,8 +28,7 @@ describe('User API ', () => {
 
     it('should get user for specified userid - api encapsulation',async () => {
         const userId = 4;
-        const client = new SupertestClient();
-        const userApi = new UserAPI(client);
+        const userApi = new UserAPI(Environment.getDefaultEnvironment());
         const response = await userApi.getUser(userId);
         expect(response.status).to.be.equal(200);
     })
